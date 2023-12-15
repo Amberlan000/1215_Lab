@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ecf0f1; /* Set a default background color */
+      text-align: center; /* Center text in the body */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 10vh;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #Button1 {
+      background-color: #3498db;
+    }
+
+    #Button2 {
+      background-color: #e74c3c;
+    }
+
+    #Button3 {
+      background-color: blue;
+    }
+
+    #Button4 {
+      background-color: green;
+    }
+    #Button5 {
+      background-color: #2ecc71;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+
+  </style>
+</head>
+<body>
+
+ 	<h1>Interactive Buttons</h1>
+  	<div class="button-container">
+	    <input type="button" id="Button1" class="button" value="1st number" onclick="alert('first number is: '+ integer1)"> 
+	    <input type="button" id="Button2" class="button" value="2nd number" onclick="alert('second number is: '+ integer2);"> 
+	    <input type="button" id="Button3" class="button" value="blue" onclick="document.body.style.backgroundColor = 'blue';"> 
+	    <input type="button" id="Button4" class="button" value="green" onclick="document.body.style.backgroundColor = 'green';"> 
+	    <input type="button" id="Button5" class="button" value="Reset BG color" onclick="alert('Reset background Color'); document.body.style.backgroundColor = 'white';"> 
+ 	 </div>
+	<script>
+		var integer1 = window.prompt("Please enter the first integer");
+		var integer2 = window.prompt("Please enter the second integer");
+		if (parseInt(integer1) > parseInt(integer2)){
+			document.body.style.backgroundColor = "lightblue";
+			document.writeln(parseInt(integer1)+ ' > ' + parseInt(integer2));
+		}else if (parseInt(integer1) < parseInt(integer2)){
+			document.body.style.backgroundColor = "orange";
+			document.writeln(parseInt(integer2)+ ' > ' + parseInt(integer1));
+		}else{
+			document.body.style.backgroundColor = "lightyellow";
+			document.writeln(parseInt(integer2)+ ' == ' + parseInt(integer1));
+		}
+	</script>
+</body>
+</html>
+
